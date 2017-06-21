@@ -1,0 +1,60 @@
+172.31.128.56
+
+var
+log
+
+opt
+file jar, config
+
+find / -type f/d -iname *device*.log
+
+#UI
+less /lib/systemd/system/ui_proxy.service
+vim /lib/systemd/system/ui_proxy.service
+down [SPACE]
+up [B]
+quit [Q]
+
+#reload ui_proxy.service
+systemctl daemon-reload
+
+#service ui_proxy restart
+
+less /usr/local/absolute/ng_ui/sites/cc-classic/environments.json
+vim /usr/local/absolute/ng_ui/sites/cc-classic/environments.json
+
+#Scheduler
+servicie abtscheduler start/stop/restart
+
+
+#The
+"dvmanticore1": {
+    "cc": {
+      "https": true,
+      "host": "dv2corp3cc.absolute.com",
+      "port": 443
+    },
+
+    "api": {
+      "https": false,
+      "host": "172.31.128.56",
+      "port": 80,
+
+      "matchers": [
+        "^\\/api\\/.*",
+        "^\\/lexicon.*"
+      ]
+    },
+
+    "auth": {
+      "https": true,
+      "host": "dv2corp3-identity.absolute.com",
+      "port": 443
+    },
+
+    "resources": {
+      "https": true,
+      "host": "dvsloca2api.dv.absolute.com",
+      "port": 1894
+    }
+  },

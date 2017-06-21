@@ -1,0 +1,85 @@
+js call web service - cross domain
+chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
+
+
+$.ajax({
+	headers: { 
+        "Accept" : "application/json; charset=utf-8",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+    contentType: 'application/json',
+	
+    data: {
+        "command": "on"
+    },
+    dataType: 'json',
+    success: function(data){
+        app.log("device control succeeded");
+    },
+    error: function(){
+        app.log("Device control failed");
+    },
+    processData: false,
+    type: 'POST',
+    url: '/devices/{device_id}/control'
+});
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+Page title
+document.getElementsByTagName("title")[0].innerHTML
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+var currentLocation = window.location;
+
+Basic Structure of a URL
+
+<protocol>//<hostname>:<port>/<pathname><search><hash>
+
+Basic structure of a URL
+
+    Protocol -- Specifies the protocol name be used to access the resource on the Internet. (HTTP (without SSL) or HTTPS (with SSL))
+
+    hostname -- Host name specifies the host that owns the resource. For example, www.stackoverflow.com. A server provides services using the name of the host.
+
+    port -- A port number used to recognize a specific process to which an Internet or other network message is to be forwarded when it arrives at a server.
+
+    pathname -- The path gives info about the specific resource within the host that the Web client wants to access. For example, /index.html.
+
+    query -- A query string follows the path component, and provides a string of information that the resource can utilize for some purpose (for example, as parameters for a search or as data to be processed).
+
+    hash -- The anchor portion of a URL, includes the hash sign (#).
+
+With these Location object properties you can access all of these URL components
+
+    hash - Sets or returns the anchor portion of a URL.
+    host - Sets or returns the hostname and port of a URL.
+    hostname - Sets or returns the hostname of a URL.
+    href - Sets or returns the entire URL.
+    pathname - Sets or returns the path name of a URL.
+    port - Sets or returns the port number the server uses for a URL.
+    protocol - Sets or returns the protocol of a URL.
+    search - Sets or returns the query portion of a URL
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+emberjs
+Adding Data Attributes
+https://guides.emberjs.com/v2.12.0/templates/binding-element-attributes/
+
+attributeBindings: ['data-toggle', 'data-placement']
+
+
+
+--------------------------------------------------------------------------------------------------------------------

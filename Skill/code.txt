@@ -1,0 +1,14 @@
+Regex Try this to match a line that contains more than just whitespace
+https://stackoverflow.com/questions/11619265/regex-matching-all-but-not-empty
+
+/.*\S.*/
+/ = delimiter
+.* = zero or more of anything but newline
+\S = anything except a whitespace (newline, tab, space)
+
+so you get
+match anything but newline + something not whitespace + anything but newline
+
+if whitespace only line counts as not whitespace, then replace the rule with /.+/, which will match 1 or more of anything.
+
+test: http://regexr.com/

@@ -1,0 +1,63 @@
+http://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-first-application.html
+https://www.mkyong.com/spring-boot/spring-boot-hello-world-example-jsp/
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>myproject</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.3.RELEASE</version>
+    </parent>
+
+    <!-- Additional lines to be added here... -->
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	</dependencies>
+	
+<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+
+@RestController
+@EnableAutoConfiguration
+public class Example {
+
+    @RequestMapping("/")
+    String home() {
+        return "Hello World!";
+    }
+
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(Example.class, args);
+    }
+
+}
+
+
+---------------------------------------------------------------------------------------------------
+
+
+send email with html content
+MimeMessage mimeMessage = emailService.emailSender.createMimeMessage();
+MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, false, "utf-8");
+mimeMessage.setContent(body, "text/html");
+helper.setTo(emailTo);
+helper.setSubject(emailSubject);
+helper.setFrom("vancouver@gmail.com");
+emailService.emailSender.send(mimeMessage);

@@ -1,0 +1,26 @@
+<start>
+Q
+Hi all, i'm encountering the problem with deploying develop branch to my Siren env, the console output shows as below
+FATAL: command execution failed
+hudson.AbortException: Ansible playbook execution failed
+    at org.jenkinsci.plugins.ansible.AnsiblePlaybookBuilder.perform(AnsiblePlaybookBuilder.java:226)
+    at org.jenkinsci.plugins.ansible.AnsiblePlaybookBuilder.perform(AnsiblePlaybookBuilder.java:199)
+    at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:78)
+    at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+    at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:779)
+    at hudson.model.Build$BuildExecution.build(Build.java:206)
+    at hudson.model.Build$BuildExecution.doRun(Build.java:163)
+    at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:534)
+    at hudson.model.Run.execute(Run.java:1728)
+    at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+    at hudson.model.ResourceController.execute(ResourceController.java:98)
+    at hudson.model.Executor.run(Executor.java:405)
+ERROR: Ansible playbook execution failed
+Finished: FAILURE
+
+A
+Reason is Pegasus added "absolute-device-unenroll-webservice" to list of war_debians to be deployed into team environment. This web service is not merged into develop, thus your branch doesn't have this module.
+I guess other teams will face same problem when building team environment.
+I will comment out this module to avoid this problem
+</end>
+

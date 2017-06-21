@@ -1,0 +1,25 @@
+DDS - Data & Device Security
+
+EDD - Endpoint Data Discovery
+
+DLP - Data Loss Prevention
+
+AP - Application Persistence
+
+EMS - ESN Management System
+
+TRMS - Theft Recovery Management System
+
+RMS - Rights Management Services
+
+URP - User Role Permission
+
+ESB - Enterprise Service Bus
+
+R&R - Report & Repair
+
+SCCM - System Center Configuration Manager
+
+MBAM - Microsoft BitLocker Administration and Monitoring
+
+CTES - ?

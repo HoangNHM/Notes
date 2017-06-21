@@ -1,0 +1,37 @@
+AV (anti-virus)
+db.AVPInfo.find({})
+
+
+BitLocker
+is a full disk encryption feature included with Windows Vista and later.
+
+
+LANDESK
+Software provides systems management, security management, service management, asset management, and process management solutions to organizations.
+
+LDMS
+Labour Department Management System (LDMS) Application.
+
+
+WinMagic
+Concerned about data security & encryption to protect your business
+
+
+Pulse Connect Secure
+offers the best mobile VPN to enable secure access from any device to enterprise apps and services in the data center or cloud.
+
+
+
+D:\Code\asb\device\device-base\device-services\device-hw-job-task\pom.xml
+
+Google Analytics
+- Currently we have 2 google analytics accounts, one for Production, another is for others. Please refer to: https://wiki.absolute.com:8443/display/AB/VN+Test+Environment / Test accounts
+
+- In order to configure GA for one environment:
+For example to configure GA on dev & qa environment
+1. go to google tag manager
+2. go to qa3cc.absolute.com
+3. open google analytics, copy container ID
+4. back to tag manager -> variable -> uaid -> paste containerID of GA
+5. go to trigger: copy link of test environment (EX: qacorpcc.absolute.com), and edit all
+6. click publish (edited)

@@ -1,0 +1,23 @@
+#longpaths
+git config --system core.longpaths true
+
+#
+git diff branch_1..branch_2
+
+git diff feature/manticore-dev..develop
+
+#reset soft mixed hard
+https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard
+
+##
+#This will restore to the previous HEAD
+git reset HEAD@{1}
+#or
+git fsck --lost-found
+-> <path to repo>/.git/lost-found/
+#or
+git reflog
+	#then
+	git reset --hard <commit-retrieved-using-reflog>
+#or
+C:\TEMP; vim e.g. optionally stores persistent undo, eclipse IDE stores local history; such features might save your a**	

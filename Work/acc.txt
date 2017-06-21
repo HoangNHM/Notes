@@ -1,0 +1,31 @@
+https://dv2corp1cc.absolute.com
+HMHNguyen@absolute.com
+
+https://dv2corp1ems.absolute.com
+hoangnguyenqtest2
+
+device: vm
+2DKK2HKJE2AA00FO0001
+2DKK2HKJE2AA00FO0002
+
+hoangnhm.rt@gmail
+app pwd
+hlquhhtprwvwybkm
+
+
+GTM-GA
+dvmanticore1@gmail.com / password@123
+
+Production Google Analytics	 	dds.absolute@gmail.com	12345678@X	 	 
+Others environment Google Analytics	 	admin@absolute.com	9yTz$5AB
+
+
+manticore cc, dv2corp3
+150285@absolute.com
+
+Currenty There are 2 places have userUid, SQL and MongoDB
+SQL: UserDB.UserInfo
+MongoDB: UserDb: have not deployed to production offically yet but we will use in the future
+
+Tables để get User info, UserUid, AccountUid ... : 
+ORIDB.odb.MapUser, ORIDB.odb.MapAccount, UserDB.UserInfo

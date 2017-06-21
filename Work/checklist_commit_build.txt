@@ -1,0 +1,43 @@
+#UI
+feature/manticore-dev
+Step1:
+Test in local env
+
+Step2:
+	2.1. Jira ticket
+		https://jira.absolute.com/browse/ABS-29374
+
+	2.2. Prepare
+		branch name
+			feature/manticore_ABS-12345_Fix_null_pointer_exception
+		git commit -m
+			ABS-12345 Fixed null pointer exception
+		
+Step3:
+Commit code & Push new branch
+
+Step4: INFORM TEAM
+Build & Deploy new branch TEAM ENV
+*UI*	https://dvsjenmas1.absolute.com/job/deployment/job/dds/job/develop/job/team-env/job/ui_dev_proxy/build?delay=0sec
+	ui_proxy_git_branch (default is "develop"): <Branch_name> feature/manticore-dev
+	AIO_HOST: 	dvmanticore1.dv.absolute.com
+
+Step5:
+Create Pull Request
+
+Step6:
+Merge code TO team branch
+
+Step7: INFORM TEAM
+BnD team branch TEAM ENV
+
+
+thaonguyen [10:21 AM] 
+@devs: About bugs status:
++ sub-bugs, after fixing, the status should  be In-progress and assign back to QA, QA will verify, if the bug is fixed, QA will close that bug & mark as Done
++ bug: resolved as Dev complete and assign back to QA, QA verify, if it's fixed, QA will close and mark as Done
+
+
+
+#API
+feature/Manticore_Team_CT

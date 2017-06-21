@@ -1,0 +1,8 @@
+get authentication code:
+
+select *
+from Authenticator.Token (nolock) 
+where ControlKeyUId = (select rowguid from ssl_user (nolock) 
+where ssl_login like 'hmhnguyen@absolute.com') 
+and StatusCode != 'USED'
+order by createdutc desc;

@@ -1,0 +1,9 @@
+Intellij
+
+Select blocks
+	Ctrl + W
+
+It jumps to opening / closing bracket
+    Ctrl + {
+    Ctrl + }
+

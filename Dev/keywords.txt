@@ -1,0 +1,69 @@
+###
+@JsonDeserialize(using = WhiteSpaceRemovalDeserializer.class)
+
+###
+debian package
+
+###
+Staging (data)
+
+###
+Data Warehouse: được định hướng bởi business. NOT copy của operational database. Hỗ trợ ra quyết định, if not -> data integration.
+một cơ sở dữ liệu được tập hợp từ nhiều nguồn của một tổ chức và chủ yếu được dùng cho việc báo cáo (reporting) và phân tích (analysis). dữ liệu ở mức độ tổng hợp, để từ đó phân tích rồi đưa ra các quyết định mang tính định hướng cho nghiệp vụ.
+Như vậy có thể thấy 2 cơ sở dữ liệu ở trên được dùng với mục đích duy trì hoạt động hàng ngày của ngân hàng. Do vậy, được gọi là Operational Database.
+1. dùng một câu lệnh SQL cực kỳ phức tạp và dài ngoằng. Gặp trường hợp dữ liệu đến từ nhiều nguồn khác nhau (csv, xml…), thậm chí có thể sẽ phải xây dựng các temp tables ngay trong operational database để thực hiện các bước trung gian.
+2. Một cách khác có thể là lập trình riêng một module cho báo cáo này.
+1,2 - Không mang tính hệ thống và thậm chí ảnh hưởng đến operational database.
+==>chuẩn hóa nó, tối ưu tốc độ để phục vụ cho việc phân tích và lập báo cáo. Nói cách khác, đó là một data warehouse.
+
+dữ liệu cần phải được làm sạch và đảm bảo về chất lượng.
+tech: tuning database được dịp phát huy hết công suất: query tuning, query hints, indexes, parallel processing, partition, materialized views…. ==>expert
+extract, transform and load (ETL)
+
+### ETL tool
+Talend Open Studio for Data Integration
+http://www.talend.com/download/talend-open-studio/#t4
+
+###
+Online Analytical Processing (OLAP)
+
+###
+Google analytic
+for web.
+
+###
+Ember.js
+
+###
+quartz
+scheduler
+
+###
+scrum, agile
+velocity is used to help us improve our own timing -- to help us get better and better and speed up, compared only to ourselves. 
+http://www.yodiz.com/blog/velocity-definition-what-is-velocity-in-agile-scrum-methodology/
+capacity
+load
+
+###
+Backdoor
+
+###
+dataLayer accross pages
+Customize dataLayer.variable'
+
+###
+wit.ai
+
+###
+prezi
+
+###
+presto
+
+###
+JavaScript templating engines are Mustache, Underscore, EJS, and Handlebars.
+https://www.sitepoint.com/a-beginners-guide-to-handlebars/
+
+
+javascript promise

@@ -1,0 +1,9 @@
+https://www.cybrary.it/course/ethical-hacking/ 
+
+find people info:
+spokeo, yasni
+
+command:
+nslookup
+
+https://www.pathanalyzer.com/download.opp
