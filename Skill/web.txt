@@ -2,6 +2,11 @@ js call web service - cross domain
 chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
 
 
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
 $.ajax({
 	headers: { 
         "Accept" : "application/json; charset=utf-8",

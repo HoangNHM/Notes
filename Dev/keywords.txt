@@ -4,10 +4,10 @@
 ###
 debian package
 
-###
+###/
 Staging (data)
 
-###
+###/
 Data Warehouse: được định hướng bởi business. NOT copy của operational database. Hỗ trợ ra quyết định, if not -> data integration.
 một cơ sở dữ liệu được tập hợp từ nhiều nguồn của một tổ chức và chủ yếu được dùng cho việc báo cáo (reporting) và phân tích (analysis). dữ liệu ở mức độ tổng hợp, để từ đó phân tích rồi đưa ra các quyết định mang tính định hướng cho nghiệp vụ.
 Như vậy có thể thấy 2 cơ sở dữ liệu ở trên được dùng với mục đích duy trì hoạt động hàng ngày của ngân hàng. Do vậy, được gọi là Operational Database.
@@ -20,25 +20,26 @@ dữ liệu cần phải được làm sạch và đảm bảo về chất lư�
 tech: tuning database được dịp phát huy hết công suất: query tuning, query hints, indexes, parallel processing, partition, materialized views…. ==>expert
 extract, transform and load (ETL)
 
-### ETL tool
+### ETL tool/ email replies from talend hoangnhm.rt@g
 Talend Open Studio for Data Integration
 http://www.talend.com/download/talend-open-studio/#t4
 
 ###
-Online Analytical Processing (OLAP)
+Online Analytical Processing (OLAP)/
 
-###
-Google analytic
-for web.
+###Google analytic - GTM
+for web./
+Firebase
 
-###
+###/
 Ember.js
 
-###
+###/
 quartz
 scheduler
 
-###
+
+###/
 scrum, agile
 velocity is used to help us improve our own timing -- to help us get better and better and speed up, compared only to ourselves. 
 http://www.yodiz.com/blog/velocity-definition-what-is-velocity-in-agile-scrum-methodology/
@@ -61,9 +62,21 @@ prezi
 ###
 presto
 
-###
+###/
 JavaScript templating engines are Mustache, Underscore, EJS, and Handlebars.
 https://www.sitepoint.com/a-beginners-guide-to-handlebars/
 
-
+##
 javascript promise
+
+
+###Design by contract
+https://en.wikipedia.org/wiki/Design_by_contract
+
+
+###
+Stored procedure
+https://stackoverflow.com/questions/459457/what-is-a-stored-procedure
+
+Silo
+

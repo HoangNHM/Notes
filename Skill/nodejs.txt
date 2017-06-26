@@ -1,2 +1,14 @@
+#Node
+install node
+https://nodejs.org/en/#download
+download .msi
+check: node -v
+
+
+
 Updating
 npm install npm@latest -g
+
+#npm-removal
+https://docs.npmjs.com/misc/removing-npm
+sudo npm uninstall npm -g

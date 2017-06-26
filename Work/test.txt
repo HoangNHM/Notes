@@ -1,4 +1,4 @@
-get authentication code:
+###get authentication code:
 
 select *
 from Authenticator.Token (nolock) 

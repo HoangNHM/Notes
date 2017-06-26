@@ -58,3 +58,15 @@ servicie abtscheduler start/stop/restart
       "port": 1894
     }
   },
+  
+  
+  
+  
+  
+  
+collapsing-menu-endpoint
+D:/Code/asb/collapsing-menu-endpoint/web-app
+tomcat7:run -Dmaven.tomcat.contextFile=D:\Code\shared-config\tomcat-context.xml
+development
+
+-DabsoluteConfigDir=D:\Code\shared-config -Dmaven.tomcat.contextFile=D:\Code\shared-config\tomcat-context.xml -DTARGET_CONFIG=EXTERNAL -DTARGET_APPENDER=stdout -DTARGET_LOG_FOLDER=. -DTARGET_LOCATOR=com.absolute.accounts.locator.impl.TestUserAccountServiceLocator -DabsoluteEncrypt=false
