@@ -1,0 +1,43 @@
+Cookies
+https://www.w3schools.com/js/js_cookies.asp
+Cookies are data, stored in small text files, on your computer.
+Cookies are saved in name-value pairs like:
+username = John Doe
+
+When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user.
+
+Cookies were invented to solve the problem "how to remember information about the user":
+    When a user visits a web page, his name can be stored in a cookie.
+    Next time the user visits the page, the cookie "remembers" his name.
+
+When a browser requests a web page from a server, cookies belonging to the page is added to the request. This way the server gets the necessary data to "remember" information about users.
+
+None of the examples below will work if your browser has local cookies support turned off.
+
+Usage:
+JavaScript can create, read, and delete cookies with the document.cookie property.
+You can also add an expiry date (in UTC time). By default, the cookie is deleted when the browser is closed
+
+expires=date - Optional. Specifies the date in GMT format (See the Date.toUTCString method). If not specified, the cookie is deleted when the browser is closed
+
+
+https://stackoverflow.com/questions/37052310/disable-google-tag-manager-according-to-the-decision-of-single-users-opt-out
+Just to point out, GTM is neither a tracking tool nor does it by itself set any cookies.
+
+More programming related, the GTM code cannot disable itself based on a cookie because GTM needs to be loaded to check if a cookie exists.
+
+Cookies are sent as part of the http request only to the domain that has set the server; GTM resides on a Google server that will not have access to the cookies set on your domain. So if an opt-out cookie is set on your domain the GTM server will not know about it.
+
+Cookies are mostly a client-side technology; GTM interacts with cookies by injecting JavaScript into your page so that it runs in the context of your domain, and then have the script evaluate the contents of your cookie (if you set up a cookie variable or a custom script). At that point the GTM code is already loaded.
+
+That is why you cannot use a cookie to prevent GTM from loading; however you can use a cookie to disable all tags within GTM. If that's not good enough you have to write your own logic to disable GTM conditionally (you could even write a routine in your CMS that doesn't render GTM code based on a cookie - after all that's your own domain, so cookie data is sent along the request; you just cannot expect Google to do this for you).
+
+GTM cannot set the cookie by itself (unless you write a custom HTML tag with a script that sets cookies, which is not different from doing it via inline code), so I will assume for an example that you already a cookie called "opt-out". It does not matter what value is stored in that cookie, we will just check if it is there.
+
+Go to GTM, to the "variables" section, click "new" and select "First Party Cookie". Name it e.g. "Opt Out Cookie" and set the name field to "opt-out". Save. Now you have a variable that checks for the opt-out cookie, returns a value if it is set and returns "undefined" if the cookie is not there.
+
+Now go to the triggers section and create a new trigger of the type page view. Call it e.g. "Opt Out Trigger". In the "fire on" section you select the "Opt Out Cookie" variable in the first field, set "does not equal" as condition and "undefined" as value (so the trigger evaluates true when the cookie is set).
+
+Now go through your tags and add the "Opt Out Trigger" to the tags you want to disable when the cookie is set. Save, publish.
+
+The only caveat is that a pageview trigger might either fire on pageview, DOM ready or pageload. An exception trigger that fires on pageview will not prevent tags from firing that are set to DOM ready or pageload, so you might need multiple exceptions, one for each stage of the loading process.

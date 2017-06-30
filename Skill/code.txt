@@ -12,3 +12,12 @@ match anything but newline + something not whitespace + anything but newline
 if whitespace only line counts as not whitespace, then replace the rule with /.+/, which will match 1 or more of anything.
 
 test: http://regexr.com/
+
+
+#List
+List<String> supplierNames = Arrays.asList("sup1", "sup2", "sup3");
+But note you are not allowed to add more elements to that list, as it's fixed-size.
+
+
+final List<String> listBaseEntityIds = reportEntityService.getIdsByTypes(types);
+String baseEntityIds = String.join(",", listBaseEntityIds);

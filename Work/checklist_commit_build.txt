@@ -10,6 +10,7 @@ Step2:
 	2.2. Prepare
 		branch name
 			feature/manticore_ABS-12345_Fix_null_pointer_exception
+			feature/manticore_ABS-31276_new_UI_impact_GA
 		git commit -m
 			ABS-12345 Fixed null pointer exception
 		
@@ -41,3 +42,4 @@ thaonguyen [10:21 AM]
 
 #API
 feature/Manticore_Team_CT
+

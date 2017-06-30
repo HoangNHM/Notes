@@ -77,6 +77,11 @@ https://en.wikipedia.org/wiki/Design_by_contract
 ###
 Stored procedure
 https://stackoverflow.com/questions/459457/what-is-a-stored-procedure
+If the operation requires a large amount of SQL code that is performed repetitively, stored procedures can be faster. They are parsed and optimized when they are first executed, and a compiled version of the stored procedure remains in a memory cache for later use. This means the stored procedure does not need to be reparsed and reoptimized with each use, resulting in much faster execution times.
+
+An operation requiring hundreds of lines of Transact-SQL code
+
+Users can be granted permission to execute a stored procedure even if they do not have permission to execute the procedure's statements directly.
 
 Silo
 

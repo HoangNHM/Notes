@@ -29,3 +29,8 @@ MongoDB: UserDb: have not deployed to production offically yet but we will use i
 
 Tables để get User info, UserUid, AccountUid ... : 
 ORIDB.odb.MapUser, ORIDB.odb.MapAccount, UserDB.UserInfo
+
+swang
+ORIDB.MapAccount[account_id]150003
+ORIDB.MapAccount[AccountUID]D68D4DA2-5821-42D5-AD20-3580F1D8BAA1
+[USERDB].[CommonUser].[UserInfo].[UserUId]28FC8114-3C12-4AFB-B228-48452C3B2ECD
