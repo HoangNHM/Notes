@@ -1,0 +1,29 @@
+$ curl -v -H "ABS_SHIB_User_Email: jvilhuber@absolute.com" http://dv2corp3-as3.dv.absolute.com/user-management-webservice/user/sessionhook?return=http://localhost
+
+Jan Vilhuber 
+[2:56 PM] 
+I doubt it
+
+
+[2:56] 
+the session is per-user, and a user is for one account.
+
+
+[2:56] 
+also sessions time out
+
+
+[2:57] 
+note the `-H "ABS_SHIB_User_Email: jvilhuber@absolute.com"`
+
+
+[2:57] 
+this tells the session API which user (and therefore which account) the session is for.
+
+
+[2:57] 
+If a session isn't used, it will eventually be deleted by the server, so you have to get a new one.
+
+
+[2:58] 
+I highly recommend the vagrant approach as a long-term solution. I will attempt to formalize that in the next few days.

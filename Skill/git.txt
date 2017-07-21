@@ -1,12 +1,20 @@
 #longpaths
 git config --system core.longpaths true
 
-#
+
+------------------------------------------------------------------------------------------------------------------
+
+
+#diff
 git diff branch_1..branch_2
 
 git diff feature/manticore-dev..develop
 
-#reset soft mixed hard
+
+------------------------------------------------------------------------------------------------------------------
+
+
+#reset
 https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard
 
 ##
@@ -21,3 +29,23 @@ git reflog
 	git reset --hard <commit-retrieved-using-reflog>
 #or
 C:\TEMP; vim e.g. optionally stores persistent undo, eclipse IDE stores local history; such features might save your a**	
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+#log
+gitk
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+#add
+git add <file-name-1> <file-name-2> <file-name-3> ...
+
+
+------------------------------------------------------------------------------------------------------------------
+
+#checkout all file
+git checkout -- .

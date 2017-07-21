@@ -21,3 +21,8 @@ But note you are not allowed to add more elements to that list, as it's fixed-si
 
 final List<String> listBaseEntityIds = reportEntityService.getIdsByTypes(types);
 String baseEntityIds = String.join(",", listBaseEntityIds);
+
+
+#Json array to list<Obj>
+TypeToken<List<Person>> token = new TypeToken<List<Person>>(){};
+List<Person> personList = gson.fromJson(response, token.getType());

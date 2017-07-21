@@ -1,0 +1,25 @@
+#Java
+1.
+mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+2.
+cd my-app
+
+3.
+mvn package
+
+4.
+java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+
+5.
+mvn site
+
+
+#Spring Boot Blank
+mvn archetype:generate -B^
+  -DarchetypeGroupId=am.ik.archetype^
+  -DarchetypeArtifactId=spring-boot-blank-archetype^
+  -DarchetypeVersion=1.0.6^
+  -DgroupId=com.example^
+  -DartifactId=hajiboot^
+  -Dversion=1.0.0-SNAPSHOT

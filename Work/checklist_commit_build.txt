@@ -11,6 +11,11 @@ Step2:
 		branch name
 			feature/manticore_ABS-12345_Fix_null_pointer_exception
 			feature/manticore_ABS-31276_new_UI_impact_GA
+			feature/ABS-32306_Remove_reports_from_Find_Devices
+			feature/ABS-27714_Display_User_Management_feature
+			feature/ABS-27368_Global_New_list_menu_item_with_permission
+			feature/ABS-33184_User_Management_display_with_permission
+			feature/ABS-33434_Find_Devices_with_permission
 		git commit -m
 			ABS-12345 Fixed null pointer exception
 		
@@ -43,3 +48,8 @@ thaonguyen [10:21 AM]
 #API
 feature/Manticore_Team_CT
 
+
+#GTM-GA
+modify GTM-ContainerId
+remote to: dv2corp3web2
+D:\wwwroot\dv2corp3cc.absolute.com\Pages\ng\index.html

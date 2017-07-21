@@ -61,3 +61,9 @@ helper.setTo(emailTo);
 helper.setSubject(emailSubject);
 helper.setFrom("vancouver@gmail.com");
 emailService.emailSender.send(mimeMessage);
+
+
+---------------------------------------------------------------------------------------------------
+
+
+mvn clean install -Dmaven.test.skip=true

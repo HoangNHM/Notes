@@ -24,6 +24,8 @@ offers the best mobile VPN to enable secure access from any device to enterprise
 
 D:\Code\asb\device\device-base\device-services\device-hw-job-task\pom.xml
 
+------------------------------------------------------------------------------------------------------
+
 Google Analytics
 - Currently we have 2 google analytics accounts, one for Production, another is for others. Please refer to: https://wiki.absolute.com:8443/display/AB/VN+Test+Environment / Test accounts
 
@@ -35,3 +37,64 @@ For example to configure GA on dev & qa environment
 4. back to tag manager -> variable -> uaid -> paste containerID of GA
 5. go to trigger: copy link of test environment (EX: qacorpcc.absolute.com), and edit all
 6. click publish (edited)
+
+
+------------------------------------------------------------------------------------------------------
+
+Device group node:
+DeviceGroupNodeController.java
+DeviceGroupMongoRepository.java
+DeviceGroupNodeMongoRepository.java
+DeviceGroupSQLRepository.java
+com.absolute.collapsingmenu.domain.devicegroupnode
+
+permission (call tly Service)
+
+------------------------------------------------------------------------------------------------------
+https://jira.absolute.com/browse/ABS-33434	/find-devices
+@Path("/find-devices")
+EVT_HISTORY_REPORT_CONTAINER: {
+  id: '11111111-0000-0000-0000-000020170302', type: ObjectTypes.REPORT_ENTITY
+},
+DVC_REPORT_CONTAINER: {
+  id: '00000000-0000-0000-0000-000000000003', type: ObjectTypes.REPORT_ENTITY
+},
+DVC_ANALYTICS_REPORT_CONTAINER: {
+  id: '00000000-0000-0000-0000-000000000231', type: ObjectTypes.REPORT_ENTITY
+}
+
+//id: baseEntitiesId
+------------------------------------------------------------------------------------------------------
+https://jira.absolute.com/browse/ABS-33184	Administration/User-Management
+https://jira.absolute.com/browse/ABS-33182
+getAdminSubMenuNodes
+@Path("/user-management")
+
+permission(RoleContainer|UserContainer)
+------------------------------------------------------------------------------------------------------
+https://jira.absolute.com/browse/ABS-25879	Global New
+Report:					All				--> Collapsed UI > Find Devices
+Fixed Device Group: 	permission 		==> open the pop-up to create Fixed Device Group in DDS 6
+Smart Device Group: 	permission 		==> open the pop-up to create Smart Device Group in DDS 6
+Policy Group: 			permission 		==> open the pop-up to create Policy Group in DDS 6
+--------------
+Alert: 					All 			--> Collapsed UI > Policies and Alerts > Create new Alerts
+Geofence: 				-Guest			--> Collapsed UI > Device Management > Create new Geofences
+--------------
+User: 					permission 		==> open the pop-up to Invite User
+Authorization Code: 	-(Power,Guest) 	--> DDS 5 > Data and Device Security > Security Authorization > Request Authorization Code
+--------------
+API Token: 				All  			--> Open the API Token Page
+
+
+Lam Phan [5:43 PM] 
+http://localhost:3000/dds5/shadow?targetURL=/Pages/Administration/RequestAuthorizationCode.aspx
+
+[5:44] 
+Alert Events => Alert
+
+[5:44] 
+Fixed Device Group => Static Device Group
+
+[5:45] 
+=> /dds5/policy/alerts => /dds5/policies/alerts

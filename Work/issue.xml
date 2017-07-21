@@ -24,3 +24,5 @@ I guess other teams will face same problem when building team environment.
 I will comment out this module to avoid this problem
 </end>
 
+Roles & Permissions
+select * from ccdata.dbo.ccproductfeatures

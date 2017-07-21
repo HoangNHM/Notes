@@ -34,3 +34,21 @@ swang
 ORIDB.MapAccount[account_id]150003
 ORIDB.MapAccount[AccountUID]D68D4DA2-5821-42D5-AD20-3580F1D8BAA1
 [USERDB].[CommonUser].[UserInfo].[UserUId]28FC8114-3C12-4AFB-B228-48452C3B2ECD
+
+150268User01@absolute.com
+
+
+SELECT *
+  FROM [USERDB].[CommonUser].[UserInfo]
+  where UserUId = '28FC8114-3C12-4AFB-B228-48452C3B2ECD'
+
+#Roles, permissions
+select * from ccdata.dbo.ccproductfeatures
+
+------------------------------------------------------------------------------------------
+#ssl_user, user_id, account_id, account_uid
+SELECT users.ssl_login, users.account_id ,lower(users.rowguid) as user_id, lower(accounts.rowguid) as account_uid
+FROM [CCdata].[dbo].[ssl_user] users
+INNER JOIN 
+[ccdata].[dbo].[account] accounts
+ON users.account_id = accounts.account_id AND users.ssl_login = '150268User01@absolute.com'

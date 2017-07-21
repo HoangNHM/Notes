@@ -60,7 +60,7 @@ wit.ai
 prezi
 
 ###
-presto
+presto: Distributed SQL Query Engine for Big Data
 
 ###/
 JavaScript templating engines are Mustache, Underscore, EJS, and Handlebars.
@@ -85,3 +85,14 @@ Users can be granted permission to execute a stored procedure even if they do no
 
 Silo
 
+
+#Injection: field, setter, contructor
+http://blog.schauderhaft.de/2012/01/01/the-one-correct-way-to-do-dependency-injection/#comment-2825180814
+
+#Spring Injection with @Resource, @Autowired and @Inject
+https://blogs.sourceallies.com/2011/08/spring-injection-with-resource-and-autowired/
+http://www.baeldung.com/spring-annotations-resource-inject-autowire
+
+
+#bean Singleton
+https://stackoverflow.com/questions/4617437/when-multiple-access-spring-singleton-instance-at-same-time?rq=1
