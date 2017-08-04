@@ -11,3 +11,10 @@ find / -type f/d -iname *device*.log
 ----------------------------------------------------------------------------------------
 
 ls *.avi
+
+#System info
+uname -a
+
+#Boot time
+systemd-analyze
+systemd-analyze blame

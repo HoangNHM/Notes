@@ -22,6 +22,19 @@ But note you are not allowed to add more elements to that list, as it's fixed-si
 final List<String> listBaseEntityIds = reportEntityService.getIdsByTypes(types);
 String baseEntityIds = String.join(",", listBaseEntityIds);
 
+#Clone
+https://stackoverflow.com/questions/2156120/java-recommended-solution-for-deep-cloning-copying-an-instance
+
+#Map
+Map<String, String> test = ImmutableMap.<String, String>builder()
+    .put("k1", "v1")
+    .put("k2", "v2")
+    ...
+    .build();
+	
+#Convert
+Map<Key,Value> map;	
+List<Value> list = new ArrayList<Value>(map.values());	
 
 #Json array to list<Obj>
 TypeToken<List<Person>> token = new TypeToken<List<Person>>(){};

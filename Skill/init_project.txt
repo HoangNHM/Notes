@@ -1,3 +1,17 @@
+#Java Hello world!
+1.
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello world!");
+  }
+}
+
+2.
+javac Main.java // -> Main.class
+
+3.
+java Main
+
 #Java
 1.
 mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
