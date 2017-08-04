@@ -1,0 +1,33 @@
+Popular, review, NOT over.
+https://pcpartpicker.com
+
+Performance desktop + budget laptop
+
+--	Case // modifiable
+-0-	Mouse
+-0-	Video Card // integrated
+-0-	Sound Card
+-0-	Optical Drive
+
++++	Storage: [{SSD 256GB}, {HDD 1TB 3.5' 7200RPM}]
++++	Monitor: [24", 20"]
++++	Ram: {min: 16GB}, {max: 32GB}
+++	CPU: {max core: 4}, {gen: >= 6}
++	Mainboard
++	PSU [350W, 450W]
+	Keyboard // <200k
+
+
+*** Cable, port
+
+
+#PSU
+#Do
+Seasonic, Silverstone, Antec, Corsair, FSP, Acbel, Cooler Master, Thermaltake, AmacroX, Delta, Gigabyte.
+
+Don't
+ARROW, BEVOD, COLORSit, DeLUX, DRAGON, eMaster, FRONTIER, GOLDEN, HuntKey, JETEK, M@GIC, MAXIMA POWER, ORIENT, PEGASUS, POCA, SWITCH POWER SUPPLY hay EVEREST, SD, SP, Vertex, Vision 3G.
+
++++	Seasonic, Silverstone, Antec và Corsair
+++	FSP, Acbel, Cooler Master và Thermaltake
++	Huntkey, Arrow và Golden Field
