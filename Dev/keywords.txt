@@ -96,3 +96,5 @@ http://www.baeldung.com/spring-annotations-resource-inject-autowire
 
 #bean Singleton
 https://stackoverflow.com/questions/4617437/when-multiple-access-spring-singleton-instance-at-same-time?rq=1
+
+#Spring @Autowired Environment
