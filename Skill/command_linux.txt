@@ -6,6 +6,8 @@ search
 whereis mongo
 
 find / -type f/d -iname *device*.log
+find / -type f -iname absolute.properties
+find / -type f/d -iname shibboleth-sp
 
 
 ----------------------------------------------------------------------------------------
@@ -18,3 +20,18 @@ uname -a
 #Boot time
 systemd-analyze
 systemd-analyze blame
+
+#Log files
+/var/log/
+#Clear log file
+echo > log_file_name
+
+#Change owner
+sudo chown hmhnguyen absolute.properties
+
+#change name
+#file
+mv old-filename.ext new-filename.ext
+// mv = move
+#folder
+full path

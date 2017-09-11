@@ -98,3 +98,7 @@ http://www.baeldung.com/spring-annotations-resource-inject-autowire
 https://stackoverflow.com/questions/4617437/when-multiple-access-spring-singleton-instance-at-same-time?rq=1
 
 #Spring @Autowired Environment
+
+@Properties
+https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html
+FileWatchDog

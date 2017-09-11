@@ -1,0 +1,7 @@
+#Find port
+netstat -a -n -o | findstr :27017
+
+  TCP    0.0.0.0:27017          0.0.0.0:0              LISTENING       6260
+
+#Kill port
+taskkill /F /PID 6260

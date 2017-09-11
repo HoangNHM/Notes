@@ -1,0 +1,28 @@
+#One line to run them all.
+mvn clean install -U -Dmaven.test.skip=true --fail-at-end
+
+#Skip test
+-Dmaven.test.failure.ignore=true (or -DtestFailureIgnore=true) - will ignore any failures occurred during test execution
+
+-Dmaven.test.error.ignore=true ( deprecated ) - will ignore any errors occurred during test execution
+
+-DskipTests - would compile the test classes but skip test execution entirely
+
+-Dmaven.test.skip=true - would not even compile the tests
+
+#Force update
+-U
+
+#Skip fail
+#If a particular module build fails, continue the rest of the reactor and report all failed modules at the end instead .
+--fail-at-end
+
+
+
+ <plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-surefire-plugin</artifactId>
+   <configuration>
+     <testFailureIgnore>true</testFailureIgnore>
+   </configuration>
+ </plugin>
