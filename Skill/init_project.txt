@@ -35,5 +35,5 @@ mvn archetype:generate -B^
   -DarchetypeArtifactId=spring-boot-blank-archetype^
   -DarchetypeVersion=1.0.6^
   -DgroupId=com.example^
-  -DartifactId=hajiboot^
   -Dversion=1.0.0-SNAPSHOT
+  -DartifactId=hajiboot^
