@@ -39,3 +39,26 @@ List<Value> list = new ArrayList<Value>(map.values());
 #Json array to list<Obj>
 TypeToken<List<Person>> token = new TypeToken<List<Person>>(){};
 List<Person> personList = gson.fromJson(response, token.getType());
+
+
+
+#JS
+#boolean
+var random_boolean = Math.random() >= 0.5;
+
+# [1; 3]
+var x = Math.floor((Math.random() * 3) + 1);
+
+# [0; 2]
+var x = Math.floor((Math.random() * 3) + 0);
+
+#Generate UUID
+function guid() {
+  function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1);
+  }
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+    s4() + '-' + s4() + s4() + s4();
+}
