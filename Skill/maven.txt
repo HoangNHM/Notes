@@ -1,4 +1,9 @@
+												
+												
+												*****Never trust the IDE
+
 #One line to run them all.
+mvn clean install -Dmaven.test.skip=true --fail-at-end
 mvn clean install -U -Dmaven.test.skip=true --fail-at-end
 
 #Skip test
@@ -26,3 +31,51 @@ mvn clean install -U -Dmaven.test.skip=true --fail-at-end
      <testFailureIgnore>true</testFailureIgnore>
    </configuration>
  </plugin>
+
+https://www.javacodegeeks.com/2014/09/maven-common-problems-and-pitfalls.html?utm_content=bufferdd29f&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer
+
+mvn dependency:analyze
+[WARNING] Used undeclared dependencies found:
+[WARNING]    com.absolute.asb.user-management:user-management-repository:jar:1.9.0-SNAPSHOT:compile
+[WARNING]    org.springframework:spring-web:jar:4.3.6.RELEASE:compile
+[WARNING]    org.slf4j:slf4j-api:jar:1.7.22:compile
+[WARNING]    org.glassfish.jersey.core:jersey-server:jar:2.25.1:compile
+
+
+mvn dependency:tree
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ user-management-webapp ---
+[INFO] com.absolute.service:user-management-webapp:jar:1.9.0-SNAPSHOT
+[INFO] +- com.absolute.dds.monitoring:monitoring-collector:jar:1.1.0:runtime
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.22:compile
+[INFO] |  \- com.absolute.dds.monitoring:monitoring-common:jar:1.1.0:runtime
+[INFO] |     \- org.elasticsearch.client:rest:jar:5.2.2:runtime
+[INFO] |        +- org.apache.httpcomponents:httpasyncclient:jar:4.1.2:runtime
+[INFO] |        \- org.apache.httpcomponents:httpcore-nio:jar:4.4.5:runtime
+[INFO] +- com.absolute.asb.user-account:user-accounts-web:jar:1.8.0:compile
+[INFO] |  +- com.absolute.asb.user-account:user-accounts-service:jar:1.8.0:compile
+[INFO] |  |  +- com.absolute.asb.common:authentication-cookie:jar:1.7.0:compile
+
+
+Nearest Definition First
+A -> B -> C -> Dv1
+A -> E -> Dv2
+
+the same depth
+it’s the order in the declaration that counts
+To fix this problem you could explicitly add a dependency to Dv1 in A to force the use of Dv1 or just exclude Dv2.
+
+#Scope
+Maven has four scopes: compile (default), provided, runtime and test. Each dependency has a scope and the scope defines a different classpath for your application.
+
+#The artifact was not found!
+
+Ahh, the dreaded “Could not resolve dependencies … Could not find artifact”. This is like the Java NPE! There are many reasons for why this happens. A few more evident that others, but a pain to debug anyway. I usually follow this checklist to try to fix the problem:
+
+    Check that the dependency is defined correctly
+    Check if you are pointing to the correct remote repositories that store the dependency
+    Check if the remote repository actually holds the dependency!
+    Check if you have the most recent pom.xml files
+    Check if the jar is corrupted
+    Check if the company repository is caching the internet repositories and didn’t not issue a request to get the new libraries
+    Check if the dependency definition is being overridden by something. Use mvn help:effective-pom for the actual maven setting building the project
+    Don’t use -o

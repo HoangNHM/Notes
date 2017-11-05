@@ -88,3 +88,8 @@ attributeBindings: ['data-toggle', 'data-placement']
 
 
 --------------------------------------------------------------------------------------------------------------------
+#apache
+#reload config
+apachectl -k graceful
+
+sudo /etc/init.d/apache2 reload
